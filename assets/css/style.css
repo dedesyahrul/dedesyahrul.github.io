@@ -1,7 +1,11 @@
 .jumbotron {
-  padding-top: 5rem;
+  padding-top: 4rem;
   /* background-color: #98d5ff; */
-  background-image: linear-gradient(to right bottom, #77b8e4, rgba(216, 56, 230, 0.336));
+  background-image: linear-gradient(
+    to right bottom,
+    #77b8e4,
+    rgba(216, 56, 230, 0.336)
+  );
   background-attachment: fixed;
 }
 
