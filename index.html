@@ -1,277 +1,460 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <html lang="en">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <head>
+        <meta charset="utf-8" />
+        <title>Official Portfolio | Dede Syahrul Muadhom</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Official Portfolio | Dede Syahrul Muadhom" />
+        <meta name="keywords" content="Dede Syahrul Muadhom, Official Portfolio" />
+        <meta name="author" content="Dede Syahrul Muadhom" />
+        <meta name="email" content="dedesyahrul00@gmail.com" />
+        <meta name="website" content="https://dedesyahrul.github.io/" />
+        <meta name="Version" content="v3.2.0" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- tobii css -->
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        <!-- Slider -->               
+        <link rel="stylesheet" href="css/tiny-slider.css"/> 
+        <!-- Icons -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Main Css -->
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    </head>
 
-    <!-- AOS-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <body>
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <!-- Logo container-->
+                <a class="logo" href="index.html">
+                    <img src="images/logodd.png" height="24" class="logo-light-mode" alt="">
+                    <img src="images/logodd.png" height="24" class="logo-dark-mode" alt="">
+                </a>
+                
+                <!-- End Logo container-->
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <!-- Mobile menu toggle-->
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </div>
+                </div>
+        
+                <div id="navigation">
+                    <!-- Navigation Menu-->   
+                    <ul class="navigation-menu">
+                        <li><a href="#home" class="sub-menu-item">Home</a></li>
+                        <li><a href="#about" class="sub-menu-item">About</a></li>
+                        <li><a href="#skills" class="sub-menu-item">Skills</a></li>
+                        <li><a href="#projects" class="sub-menu-item">Projects</a></li>
+                        <li><a href="#contact" class="sub-menu-item">Contacts</a></li>
+                    </ul><!--end navigation menu-->
+                </div><!--end navigation-->
+            </div><!--end container-->
+        </header><!--end header-->
+        <!-- Navbar End -->
+        
+        <!-- Hero Start -->
+        <section class="bg-home rtl-personal-hero bg-light d-flex align-items-center" style="background:url('images/bgport.png') center center" id="home">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-7">
+                        <div class="title-heading mt-4">
+                            <h1 class="display-3 fw-bold mb-3">Dede Syahrul <br>Muadhom <br> <span class="text-primary typewrite" data-period="2000" data-type='[ "Full Stack Developer" ]'> <span class="wrap"></span> </span> </h1>
+                            <p class="para-desc text-muted">S1 Teknik Informatika from Universitas Dinamika Bangsa Jambi.</p>
+                            <div class="mt-4 pt-2">
+                                <a href="#projects" class="btn btn-primary mt-2 me-2"><i class="uil uil-camera"></i> View Projects</a>
+                                <a href="doc/CV_Port_Dede_Syahrul_Muadhom.pdf" target="_blank" class="btn btn-outline-primary mt-2"><i class="uil uil-cloud-download"></i> CV</a>
+                            </div>
+                        </div>
+                    </div><!--end col-->
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+                    <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                        <div class="position-relative">
+                            <img src="images/Foto-Dede.webp" class="rounded img-fluid mx-auto d-block" alt="">
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Hero End -->
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+        <!-- About Start -->
+        <section class="section">
+            <div class="container" id="about">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="section-title">
+                            <h4 class="title">About Me</h4>
+                            <h6 class="text-primary mb-4">I'm Passionate Full Stack Developer</h6>
+                            <p class="text-muted mb-0">
+                            Salam! Saya adalah seorang lulusan ilmu komputer dengan hasrat mendalam untuk dunia teknologi dan pengembangan aplikasi web. Keahlian terbesar saya adalah dalam pengembangan aplikasi web menggunakan Laravel Framework, di mana saya telah menciptakan solusi kreatif dan efisien untuk berbagai tantangan bisnis.
+                            </p>
+                            <br>
+                            <p class="text-muted mb-0">
+                            Dalam beberapa tahun terakhir, saya telah berhasil mengintegrasikan Proxmox dalam berbagai proyek. Ini bukan hanya tentang teknologi, tetapi juga tentang memberikan perusahaan kemampuan untuk tumbuh, menghemat biaya, dan memperkuat ketahanan infrastruktur mereka. 
+                            </p>
+                            <br>
+                            <p class="text-muted mb-0">
+                            Saya juga memiliki latar belakang yang kuat dalam administrasi server berbasis Linux dan pemahaman yang mendalam tentang sistem operasi. Kemampuan ini memungkinkan saya untuk memberikan dukungan yang stabil dan efisien bagi proyek-proyek IT.
+                            </p>
+                        </div>
+                    </div><!--end col-->
 
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/ico/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/ico/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/ico/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/ico/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/ico/apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="assets/ico/favicon-128.png" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="assets/ico/mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="assets/ico/mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="assets/ico/mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="assets/ico/mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="assets/ico/mstile-310x310.png" />
+                    <div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
 
-    <title>Portofolio | Dede Syahrul Muadhom</title>
-  </head>
-  <body id="home">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Dede Syahrul</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contacts</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Akhir Navbar -->
+                        <p class="text-muted mb-0">
+                        Tidak hanya itu, saya juga sangat bersemangat dalam mempelajari teknologi mutakhir seperti Docker, komputasi awan, dan layanan AWS. Saya percaya bahwa pengembangan IT adalah tentang pengejaran pengetahuan baru, dan saya selalu mencari peluang untuk berkembang.
+                        </p>
+                        <br>
+                        <p class="text-muted mb-0">
+                        Saya siap untuk menghadapi tantangan baru, berkolaborasi dengan tim yang berdedikasi, dan terus memperluas keterampilan dan pengetahuan saya dalam pengembangan, khususnya menggunakan Laravel Framework. Terima kasih telah mengunjungi portofolio saya, dan saya berharap bisa bekerja sama dengan Anda dalam proyek mendatang.
+                        </p>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron text-center">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-7 col-lg-6 order-md-1 pt-8">
-            <img src="assets/img/photo_01.webp" class="img-fluid" alt="Dede Syahrul" width="500" />
-          </div>
-          <div class="col-md-5 col-lg-6 text-center text-md-start pt-md-9">
-            <h1 class="mb-4 display-2 fw-bold">Dede Syahrul<br class="d-block d-lg-none d-xl-block" />Muadhom</h1>
-            <p class="mt-3 mb-4">S1 Teknik Informatika from<br />Universitas Dinamika Bangsa Jambi.<br />Full Stack Developer</p>
-            <a type="button" class="btn btn-lg btn-outline-primary shadow-sm" href="assets/doc/cv/CV_Dede_Syahrul_Muadhom.pdf" target="_blank">Download CV</a>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,32L18.5,53.3C36.9,75,74,117,111,128C147.7,139,185,117,222,122.7C258.5,128,295,160,332,186.7C369.2,213,406,235,443,218.7C480,203,517,149,554,122.7C590.8,96,628,96,665,117.3C701.5,139,738,181,775,202.7C812.3,224,849,224,886,208C923.1,192,960,160,997,144C1033.8,128,1071,128,1108,117.3C1144.6,107,1182,85,1218,69.3C1255.4,53,1292,43,1329,58.7C1366.2,75,1403,117,1422,138.7L1440,160L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir jumbotron -->
+                        <div class="mt-4">
+                            <a href="https://api.whatsapp.com/send?phone=082246684545" target="_blank" class="btn btn-primary"><i class="uil uil-phone"></i> WhatsApp</a>
+                        </div>
+                        
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
 
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row fs-5 text-center">
-          <div class="col-md-4" data-aos="fade-right">
-            <p>Saya Dede Syahrul Muadhom, akrab disapa Dede, lahir di Kuningan, 06 Januari 1998 anak kedua dari empat bersaudara. Saya beragama Islam, memiliki tinggi 160cm, berat 58 kg dengan golongan darah A.</p>
-          </div>
-          <div class="col-md-4" data-aos="fade-down" data-aos-delay="100">
-            <p>Menyelesaikan pendidikan dasar di SD Negeri 165 Kota Jambi, pendidikan menengah pertama di MTs Negeri 10 Kuningan, dan pendidikan menengah atas di SMK Pelita Raya Jambi.</p>
-          </div>
-          <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
-            <p>
-              Menyelesaikan Pendidikan S1 di Universitas Dinamika Bangsa Jambi tahun 2021. Saya adalah orang yang menggemari bidang IT Khususnya Networking dan Web Programming. Saya juga sangat menggemari dalam hal teknisi, seperti merakit
-              PC, instalasi operating systems.
-            </p>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#77b8e4"
-          fill-opacity="1"
-          d="M0,96L18.5,117.3C36.9,139,74,181,111,176C147.7,171,185,117,222,96C258.5,75,295,85,332,101.3C369.2,117,406,139,443,144C480,149,517,139,554,138.7C590.8,139,628,149,665,160C701.5,171,738,181,775,170.7C812.3,160,849,128,886,106.7C923.1,85,960,75,997,90.7C1033.8,107,1071,149,1108,154.7C1144.6,160,1182,128,1218,106.7C1255.4,85,1292,75,1329,80C1366.2,85,1403,107,1422,117.3L1440,128L1440,320L1421.5,320C1403.1,320,1366,320,1329,320C1292.3,320,1255,320,1218,320C1181.5,320,1145,320,1108,320C1070.8,320,1034,320,997,320C960,320,923,320,886,320C849.2,320,812,320,775,320C738.5,320,702,320,665,320C627.7,320,591,320,554,320C516.9,320,480,320,443,320C406.2,320,369,320,332,320C295.4,320,258,320,222,320C184.6,320,148,320,111,320C73.8,320,37,320,18,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- Akhir About -->
+            <div class="container mt-100 mt-60" id="skills">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title mb-4 pb-2">
+                            <h4 class="title mb-4">Skills</h4>
+                            <!-- <p class="text-muted para-desc mb-0">Programming Skills</p> -->
+                            <div class="col-md-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                                <div class="ms-md-4">
+                                    <div class="progress-box">
+                                        <h6 class="title text-muted">PHP / MYSQL</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar position-relative bg-primary" style="width:75%;">
+                                                <div class="progress-value d-block text-muted h6">75%</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end process box-->
+                                    <div class="progress-box mt-4">
+                                        <h6 class="title text-muted">Bootstrap</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar position-relative bg-primary" style="width:85%;">
+                                                <div class="progress-value d-block text-muted h6">85%</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end process box-->
+                                    <div class="progress-box mt-4">
+                                        <h6 class="title text-muted">Framework Laravel</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar position-relative bg-primary" style="width:79%;">
+                                                <div class="progress-value d-block text-muted h6">79%</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end process box-->
+                                    <div class="progress-box mt-4">
+                                        <h6 class="title text-muted">Java</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar position-relative bg-primary" style="width:75%;">
+                                                <div class="progress-value d-block text-muted h6">75%</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end process box-->
+                                    <div class="progress-box mt-4">
+                                        <h6 class="title text-muted">Kotlin</h6>
+                                        <div class="progress">
+                                            <div class="progress-bar position-relative bg-primary" style="width:70%;">
+                                                <div class="progress-value d-block text-muted h6">70%</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end process box-->
+                                </div>
+                            </div><!--end col-->
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+                
+                </div><!--end row-->
+            </div><!--end container-->
 
-    <!-- Projects -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>My Projects</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="500" data-aos-delay="100">
-              <img src="assets/img/projects/1.jpg" class="card-img-top" alt="Project 1" />
-              <div class="card-body">
-                <p class="card-text">Membuat aplikasi education dalam mengenalkan teknologi Augmented Reality (AR) untuk pengenalan hardware komputer berbasis android pada SMK Pelita Raya Kota Jambi.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500" data-aos-delay="200">
-              <img src="assets/img/projects/2.jpg" class="card-img-top" alt="Project 2" />
-              <div class="card-body">
-                <p class="card-text">Membuat design website event dalam rangka anniversary ke-17 STIKOM DB Jambi, sekaligus tugas akhir semester.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500" data-aos-delay="300">
-              <img src="assets/img/projects/3.jpg" class="card-img-top" alt="Project 3" />
-              <div class="card-body">
-                <p class="card-text">Membuat aplikasi games quiz tentang pengenalan komponen 3 fasa, berbasis android pada tingkta SMK jurusan teknik elektro.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,64L17.1,74.7C34.3,85,69,107,103,106.7C137.1,107,171,85,206,112C240,139,274,213,309,229.3C342.9,245,377,203,411,192C445.7,181,480,203,514,197.3C548.6,192,583,160,617,154.7C651.4,149,686,171,720,176C754.3,181,789,171,823,154.7C857.1,139,891,117,926,133.3C960,149,994,203,1029,213.3C1062.9,224,1097,192,1131,186.7C1165.7,181,1200,203,1234,213.3C1268.6,224,1303,224,1337,234.7C1371.4,245,1406,267,1423,277.3L1440,288L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+            
 
-    <!-- Akhir Projects -->
+            <div class="container mt-100 mt-60" id="projects">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title mb-4 pb-2">
+                            <h4 class="title mb-4">Projects</h4>
+                            <!-- <p class="text-muted para-desc mb-0">Ini adalah project yang pernah saya kerjakan</p> -->
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Contact Me</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-7">
-            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-              <strong>Terimakasih!</strong> Pesan anda sudah kami terima.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <form name="wpu-contact-form">
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-              </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/pidsus.webp" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="https://www.pidsus-kejaritjt.com/" target="_blank" class="card-title title text-dark">WEB MANAGEMENT SYSTEM <br>KEJAKSAAN NEGERI TANJUNG JABUNG TIMUR <br>BIDANG PIDSUS</a></h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/wbs.webp" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="https://wbs.tanjabtimkab.go.id/" target="_blank" class="card-title title text-dark">Whistle Blowing System (WBS) <br>INSPEKTORAT <br>Kabupaten Tanjung Jabung Timur </a></h5>
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/stp.webp" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="https://stp.pidsus-kejaritjt.com/" target="_blank" class="card-title title text-dark">Content Management System (CMS) <br>Si Teman Publik <br>Kejaksaan Negeri Tanjung Jabung Timur </a></h5>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
 
-              <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/stpmobile.webp" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="https://play.google.com/store/apps/details?id=com.tanjabtimkab.sitemanpublik" target="_blank" class="card-title title text-dark">Sistem Informasi Pelayanan Publik <br>(Si Teman Publik) <br>Kejaksaan Negeri Tanjung Jabung Timur </a></h5>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/1.jpg" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="javascript:void(0)" class="card-title title text-dark">
+                                Membuat aplikasi education dalam mengenalkan teknologi Augmented Reality (AR) untuk pengenalan hardware komputer berbasis android pada SMK Pelita Raya Kota Jambi.
+                                </a></h5> 
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-4 col-md-6 mt-4 pt-2">
+                        <div class="card blog rounded border-0 shadow">
+                            <div class="position-relative">
+                                <img src="images/project/3.jpg" class="card-img-top rounded-top" alt="...">
+                                <div class="overlay rounded-top bg-dark"></div>
+                            </div>
+                            <div class="card-body content">
+                                <h5><a href="javascript:void(0)" class="card-title title text-dark">
+                                Membuat aplikasi games quiz tentang pengenalan komponen 3 fasa, berbasis android pada tingkta SMK jurusan teknik elektro.
+                                </a></h5>
+                                
+                            </div>
+                            
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
 
-              <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Loading...
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0d6efd"
-          fill-opacity="1"
-          d="M0,0L17.1,16C34.3,32,69,64,103,74.7C137.1,85,171,75,206,80C240,85,274,107,309,101.3C342.9,96,377,64,411,80C445.7,96,480,160,514,176C548.6,192,583,160,617,144C651.4,128,686,128,720,138.7C754.3,149,789,171,823,170.7C857.1,171,891,149,926,149.3C960,149,994,171,1029,176C1062.9,181,1097,171,1131,160C1165.7,149,1200,139,1234,144C1268.6,149,1303,171,1337,181.3C1371.4,192,1406,192,1423,192L1440,192L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
+            </div><!--end container-->
 
-    <!-- Akhir Contact -->
+           
+        </section><!--end section-->
+        <!-- About End -->
 
-    <!-- Footer -->
-    <footer class="bg-primary text-white text-center p-5">
-      <p>
-        Created with <i class="bi bi-heart-fill text-danger"></i> by
-        <a href="https://www.instagram.com/d.syahrul06/" class="text-white fw-bold">Dede Syahrul Muadhom</a>
-      </p>
-    </footer>
+        <!-- Testi Start -->
+        
+        <!-- Testi End -->
 
-    <!-- Akhir Footer -->
+        <!-- Client start -->
+        <section class="py-4 border-bottom">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/proxmox.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
 
-    <!-- Optional JavaScript; choose one of the two! -->
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/dock.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/aws.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/linux.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/laravel.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/logo/kotlin.png" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Client End -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <!-- Blog Start -->
+        <section class="section">
+            <div class="container mt-100 mt-60" id="contact">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="section-title mb-4 pb-2">
+                            <h4 class="title mb-4">Contact Me</h4>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 2000,
-      });
-    </script>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6  mt-4 pt-2">
+                        <div class="card rounded shadow border-0">
+                            <div class="card-body">
+                                <h4 class="card-title">Get In Touch !</h4>
 
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwpVLNd_aWYZr0q805l7eh0m79RQrASuqFlG39b6frH2lKfLjceF-9ANbeIat6C6j5Yug/exec';
-      const form = document.forms['wpu-contact-form'];
-      const btnKirim = document.querySelector('.btn-kirim');
-      const btnLoading = document.querySelector('.btn-loading');
-      const myAlert = document.querySelector('.my-alert');
+                                <div class="custom-form mt-3">
+                                    <form method="post" name="myForm" onsubmit="return validateForm()">
+                                        <p id="error-msg" class="mb-0"></p>
+                                        <div id="simple-msg"></div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Your Name <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="user" class="fea icon-sm icons"></i>
+                                                        <input name="name" id="name" type="text" class="form-control ps-5" placeholder="Name :">
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Your Email <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="mail" class="fea icon-sm icons"></i>
+                                                        <input name="email" id="email" type="email" class="form-control ps-5" placeholder="Email :">
+                                                    </div>
+                                                </div> 
+                                            </div><!--end col-->
+        
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Subject</label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="book" class="fea icon-sm icons"></i>
+                                                        <input name="subject" id="subject" class="form-control ps-5" placeholder="subject :">
+                                                    </div>
+                                                </div>
+                                            </div><!--end col-->
+        
+                                            <div class="col-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Comments <span class="text-danger">*</span></label>
+                                                    <div class="form-icon position-relative">
+                                                        <i data-feather="message-circle" class="fea icon-sm icons clearfix"></i>
+                                                        <textarea name="comments" id="comments" rows="4" class="form-control ps-5" placeholder="Message :"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-grid">
+                                                    <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                                </div>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </form>
+                                </div><!--end custom-form-->
+                            </div>
+                        </div>
+                    </div><!--end col-->
 
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // ketika tombol submit diklik
-        // tampilkan tombol loading, hilangkan tombol kirim
-        btnLoading.classList.toggle('d-none');
-        btnKirim.classList.toggle('d-none');
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => {
-            // tampilkan tombol kirim, hilangkan tombol loading
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            // tampilkan alert
-            myAlert.classList.toggle('d-none');
-            // reset form
-            form.reset();
-            console.log('Success!', response);
-          })
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
-  </body>
+                    <div class="col-lg-8 col-md-6 ps-md-3 pe-md-3 mt-4 pt-2">
+                        <div class="card border-0 shadow rounded">
+                            <div class="map map-height-two map-gray">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684.9633192887869!2d103.63367637696123!3d-1.5931109709834195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2588d52fd86bf7%3A0xa00f5f090add25e7!2sAl%20Hidayah%20Islamic%20Elementary%20School!5e0!3m2!1sen!2sid!4v1696256023231!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Blog End -->
+
+        <!-- Footer Start -->
+        <footer class="footer footer-bar">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="text-sm-start">
+                            <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Created with <i class="mdi mdi-heart text-danger"></i> by <a href="https://dedesyahrul.github.io/" target="_blank" class="text-reset">Dede Syahrul Muadhom</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                            <li class="list-inline-item mb-0"><a href="https://www.instagram.com/dedesyahh/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank" class="rounded"><i data-feather="instagram" class="fea icon-sm fea-social"></i></a></li>
+                            <li class="list-inline-item mb-0"><a href="https://www.linkedin.com/in/dede-syahrul-muadhom-9b1b78111/" target="_blank" class="rounded"><i data-feather="linkedin" class="fea icon-sm fea-social"></i></a></li>
+                        </ul><!--end icon-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- Footer End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="btn btn-icon btn-primary back-to-top"><i data-feather="arrow-up" class="icons"></i></a>
+        <!-- Back to top -->
+
+        
+
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- tobii js -->
+        <script src="js/tobii.min.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
+        <!-- Contact -->
+        <script src="js/contact.js "></script>
+        <!-- Icons -->
+        <script src="js/feather.min.js"></script>
+        <!-- Main Js -->
+        <script src="js/plugins.init.js"></script><!--Note: All init js like tiny slider, counter, countdown, maintenance, lightbox, gallery, swiper slider, aos animation etc.-->
+        <script src="js/app.js"></script><!--Note: All important javascript like page loader, menu, sticky menu, menu-toggler, one page menu etc. -->
+    </body>
 </html>
