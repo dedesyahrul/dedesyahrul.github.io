@@ -17,6 +17,311 @@
 	<!-- Fonts/Icons -->
 	<link href="assets/plugins/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 	<link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet">
+
+	<Style>
+		.role-container .h3 {
+			font-size: 2rem;
+			line-height: 1.4;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.role-title {
+			position: relative;
+			font-weight: 500;
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: all 0.3s ease;
+		}
+
+		.gradient-hover {
+			background-size: 200% auto;
+			background-image: linear-gradient(to right,
+					#2ecc71 0%,
+					#3498db 50%,
+					#2ecc71 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transition: 0.5s;
+		}
+
+		.gradient-hover:hover {
+			background-position: right center;
+			transform: translateY(-2px);
+			text-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+		}
+
+		.text-gradient {
+			font-size: 1.8rem;
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.spin-animation {
+			font-size: 1.4rem;
+			display: inline-block;
+			animation: spin 6s linear infinite;
+			filter: drop-shadow(0 0 8px rgba(52, 152, 219, 0.3));
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+		/* Glowing effect */
+		@keyframes glow {
+			from {
+				text-shadow: 0 0 10px rgba(46, 204, 113, 0.2),
+					0 0 20px rgba(52, 152, 219, 0.2);
+			}
+
+			to {
+				text-shadow: 0 0 20px rgba(46, 204, 113, 0.4),
+					0 0 30px rgba(52, 152, 219, 0.4);
+			}
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.role-container .h3 {
+				font-size: 1.5rem;
+			}
+
+			.text-gradient {
+				font-size: 1.4rem;
+			}
+
+			.spin-animation {
+				font-size: 1.2rem;
+			}
+		}
+
+		.bg-gradient {
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			border: none;
+			transition: all 0.3s ease;
+		}
+
+		.bg-gradient:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+		}
+
+		.text-gradient {
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.experience-counter {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			position: relative;
+		}
+
+		.experience-counter .display-2 {
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-size: 4rem;
+			line-height: 1;
+		}
+
+		.badge.bg-gradient {
+			padding: 0.5rem 0.8rem;
+			font-size: 0.75rem;
+			font-weight: 500;
+			letter-spacing: 0.3px;
+			border-radius: 50px;
+			background-size: 200% auto;
+			background-image: linear-gradient(to right,
+					#2ecc71 0%,
+					#3498db 50%,
+					#2ecc71 100%);
+			border: none;
+			transition: all 0.3s ease;
+			display: inline-flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		.badge.bg-gradient:hover {
+			background-position: right center;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
+		}
+
+		.badge.bg-gradient i {
+			font-size: 0.8rem;
+			opacity: 0.9;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.badge.bg-gradient {
+				padding: 0.4rem 0.7rem;
+				font-size: 0.7rem;
+			}
+
+			.badge.bg-gradient i {
+				font-size: 0.75rem;
+			}
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.experience-counter .display-2 {
+				font-size: 3rem;
+			}
+
+			.badge.bg-gradient {
+				padding: 0.5rem 0.8rem;
+				font-size: 0.8rem;
+			}
+		}
+
+		.education-icon {
+			font-size: 2.5rem;
+			margin-bottom: 1.5rem;
+			position: relative;
+			z-index: 2;
+		}
+
+		.text-gradient {
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.gradient-overlay {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 150px;
+			height: 150px;
+			background: linear-gradient(45deg, transparent, rgba(46, 204, 113, 0.1));
+			border-radius: 50%;
+			transform: translate(30%, -30%);
+		}
+
+		.education-content {
+			position: relative;
+			z-index: 2;
+		}
+
+		.badge.bg-gradient {
+			padding: 0.5rem 1rem;
+			font-weight: 500;
+			letter-spacing: 0.5px;
+			background: linear-gradient(120deg, #2ecc71, #3498db);
+			border: none;
+			transition: all 0.3s ease;
+		}
+
+		.border-light {
+			border-color: rgba(255, 255, 255, 0.1) !important;
+		}
+
+		/* Hover effects */
+		.bg-theme-secondary:hover .gradient-overlay {
+			transform: translate(25%, -25%) scale(1.1);
+			transition: transform 0.3s ease;
+		}
+
+		.bg-theme-secondary:hover .education-icon i {
+			transform: scale(1.1);
+			transition: transform 0.3s ease;
+		}
+
+		.tech-stack-container {
+			position: relative;
+			width: 100%;
+		}
+
+		.stack-group {
+			position: relative;
+			width: 100%;
+		}
+
+		.stack-title {
+			font-size: 0.875rem;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.badge.bg-gradient {
+			white-space: nowrap;
+			display: inline-flex;
+			align-items: center;
+		}
+
+		/* Ensure consistent spacing */
+		.d-flex.flex-wrap {
+			margin: -0.25rem;
+		}
+
+		.d-flex.flex-wrap>.badge {
+			margin: 0.25rem;
+		}
+
+		.skills-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.skill-tag {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.5rem 1rem;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 50px;
+			font-size: 0.875rem;
+			color: rgba(255, 255, 255, 0.9);
+			transition: all 0.3s ease;
+			white-space: nowrap;
+		}
+
+		.skill-tag i {
+			font-size: 1rem;
+			color: #2ecc71;
+		}
+
+		.skill-tag:hover {
+			background: rgba(46, 204, 113, 0.1);
+			transform: translateY(-2px);
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.skill-tag {
+				padding: 0.4rem 0.8rem;
+				font-size: 0.8rem;
+			}
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.skills-wrapper {
+				margin-bottom: 1rem;
+			}
+		}
+	</Style>
 </head>
 
 <body class="theme-dark" data-preloader="true">
@@ -80,42 +385,70 @@
 	<div class="section-spacing pb-0" id="about">
 		<div class="container">
 			<div class="row g-4 g-xxl-5">
+				<!-- Avatar Section -->
 				<div class="col-12 col-md-4 col-xxl-3 order-md-2 text-lg-end">
 					<div class="hero-avatar">
-						<img src="assets/images/dedesyahh.webp" alt="">
+						<img src="assets/images/dedesyahh.webp" alt="Dede Syahrul Muadhom">
 						<div class="avatar-icon">
 							<ul class="list-inline-sm">
 								<li>
-									<a href="#"><i class="bi bi-facebook"></i></a>
+									<a class="button-circle button-circle-sm button-circle-gradient" href="#">
+										<i class="bi bi-github"></i>
+									</a>
 								</li>
 								<li>
-									<a href="#"><i class="bi bi-instagram"></i></a>
+									<a class="button-circle button-circle-sm button-circle-gradient" href="#">
+										<i class="bi bi-linkedin"></i>
+									</a>
 								</li>
 								<li>
-									<a href="#"><i class="bi bi-twitter-x"></i></a>
+									<a class="button-circle button-circle-sm button-circle-gradient" href="#">
+										<i class="bi bi-twitter-x"></i>
+									</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
+
+				<!-- Content Section -->
 				<div class="col-12 col-md-8 col-xxl-9 order-md-1">
-					<h1 class="display-3 fw-medium">Dede Syahrul Muadhom, <br> Full Stack Developer 👨‍💻</h1>
-					<p>I'm a full stack developer with a passion for creating web applications that are both functional
-						and aesthetically pleasing. ✨ I have a strong background in both front-end and back-end
-						development, and I'm always looking for new challenges to tackle! 🚀</p>
+					<h1 class="display-3 fw-medium mb-3">Dede Syahrul Muadhom</h1>
+
+					<div class="role-container mb-4">
+						<h3 class="h3">
+							<span class="role-title gradient-hover">Software Engineer</span>
+							<span class="text-gradient mx-3 fw-light">|</span>
+							<span class="role-title gradient-hover">Cloud Infrastructure Engineer</span>
+							<i class="bi bi-gear-fill text-gradient spin-animation ms-2"></i>
+						</h3>
+					</div>
+
+					<div class="text-lighter-40 mb-4">
+						<p class="mb-3">
+							Hey there! 👋 Just your friendly neighborhood tech geek who's obsessed with code and
+							servers!
+						</p>
+
+						<p class="mb-3">
+							About me? I'm that guy who loves building cool stuff with Laravel and keeping servers happy.
+							From crafting apps to managing cloud infra with AWS, Docker, and Proxmox - yeah, I'm your
+							temporary 'full-stack' nerd who can't stop tinkering! ☕🚀
+						</p>
+
+						<p class="mb-0">
+							When I'm not coding? I'm probably binge-watching tech tutorials or having deep conversations
+							with ChatGPT. Yeah, I'm that kind of geek! 🤓✨
+						</p>
+					</div>
+
 					<div class="hire-status mt-3">
 						<span class="dot-available"></span>
 						Ready to collaborate! 🤝
 					</div>
-					<!--
-						<div class="hire-status mt-4">
-							<span class="dot-unavailable"></span>
-							Currently busy with projects 🎯
-						</div>
-						-->
 				</div>
-			</div><!-- end row -->
-		</div><!-- end container -->
+			</div>
+		</div>
 	</div>
 	<!-- end Hero section -->
 
@@ -123,66 +456,101 @@
 	<div class="section-spacing pb-0" id="services">
 		<div class="container">
 			<div class="row g-4 align-items-center">
+				<!-- Software Engineering Card -->
 				<div class="col-12 col-lg-6 col-xl-4">
 					<div class="bg-lighter border-radius p-4 p-md-5 box-shadow position-relative">
 						<div class="icon-4xl mb-3 mb-lg-4 mb-xl-5">
-							<i class="bi bi-code-square text-lighter-40"></i>
+							<i class="bi bi-code-square text-gradient"></i>
 						</div>
-						<h5 class="fw-medium line-height-140">Web Development dengan Laravel Framework</h5>
-						<p class="text-lighter-40">Membangun aplikasi web yang handal, aman, dan scalable dengan Laravel
-							Framework</p>
-						<a class="button-circle button-corner position-absolute end-0 bottom-0" href="#">
-							<i class="bi bi-send"></i>
-						</a>
-					</div>
-				</div>
-				<div class="col-12 col-lg-6 col-xl-4">
-					<div class="bg-lighter border-radius p-4 p-md-5 box-shadow position-relative">
-						<div class="icon-4xl mb-3 mb-lg-4 mb-xl-5">
-							<i class="bi bi-hdd-rack text-lighter-40"></i>
-						</div>
-						<h5 class="fw-medium line-height-140">Server Management & Virtualization</h5>
-						<p class="text-lighter-40">Optimalisasi infrastruktur dengan Proxmox, Linux Server, dan Docker
+						<h5 class="fw-medium line-height-140">Software Engineering</h5>
+						<p class="text-lighter-40">
+							Membangun aplikasi web yang handal dengan Laravel, RESTful APIs, dan
+							database optimization untuk menghasilkan solusi yang scalable
 						</p>
 						<a class="button-circle button-corner position-absolute end-0 bottom-0" href="#">
 							<i class="bi bi-send"></i>
 						</a>
 					</div>
 				</div>
+
+				<!-- Cloud Infrastructure Card -->
+				<div class="col-12 col-lg-6 col-xl-4">
+					<div class="bg-lighter border-radius p-4 p-md-5 box-shadow position-relative">
+						<div class="icon-4xl mb-3 mb-lg-4 mb-xl-5">
+							<i class="bi bi-cloud-fill text-gradient"></i>
+						</div>
+						<h5 class="fw-medium line-height-140">Cloud Infrastructure</h5>
+						<p class="text-lighter-40">
+							Mengelola infrastruktur cloud dengan AWS, virtualisasi menggunakan Proxmox,
+							and containerization dengan Docker untuk deployment yang efisien
+						</p>
+						<a class="button-circle button-corner position-absolute end-0 bottom-0" href="#">
+							<i class="bi bi-send"></i>
+						</a>
+					</div>
+				</div>
+
+				<!-- Experience Card -->
 				<div class="col-12 col-xl-4 align-self-stretch">
 					<div class="bg-theme border-radius p-4 p-md-5 box-shadow h-100">
 						<div class="row g-4">
 							<!-- Experience Counter -->
 							<div class="col-12">
-								<div class="d-flex align-items-center mb-3">
+								<div class="experience-counter mb-3">
 									<div
 										class="h1 display-2 font-family-tertiary fw-semi-bold stroke-text text-fade me-2">
 										3+</div>
 									<div class="h4 text-white mb-0">Years of Experience</div>
 								</div>
-								<p class="text-lighter-40 mb-4">Full Stack Development & Server Management</p>
+								<p class="text-lighter-40 mb-4">Software Engineering & Cloud Infrastructure</p>
 							</div>
 
-							<!-- Tech Stack -->
-							<div class="col-12">
-								<div class="mt-2">
-									<div class="d-flex flex-wrap gap-2">
-										<span class="badge bg-lighter-10 text-white">Laravel</span>
-										<span class="badge bg-lighter-10 text-white">Bootstrap</span>
-										<span class="badge bg-lighter-10 text-white">React Native</span>
-										<span class="badge bg-lighter-10 text-white">MySQL</span>
-										<span class="badge bg-lighter-10 text-white">Linux</span>
-										<span class="badge bg-lighter-10 text-white">Proxmox</span>
-										<span class="badge bg-lighter-10 text-white">Docker</span>
-										<span class="badge bg-lighter-10 text-white">AWS</span>
+							<!-- Simple Skills -->
+							<div class="row">
+								<div class="col-6 col-md-6">
+									<div class="skills-wrapper">
+										<div class="skill-tag">
+											<i class="bi bi-code-slash"></i>
+											Laravel
+										</div>
+										<div class="skill-tag">
+											<i class="bi bi-database"></i>
+											MySQL
+										</div>
+										<div class="skill-tag">
+											<i class="bi bi-android2"></i>
+											Android
+										</div>
+										
 									</div>
 								</div>
+
+								<div class="col-6 col-md-6">
+									<div class="skills-wrapper">
+										<div class="skill-tag">
+											<i class="bi bi-hdd-rack"></i>
+											Proxmox
+										</div>
+										<div class="skill-tag">
+											<i class="bi bi-ubuntu"></i>
+											Linux
+										</div>
+										<div class="skill-tag">
+											<i class="bi bi-apple"></i>
+											iOS
+										</div>
+									</div>
+								</div>
+
+
 							</div>
+
+
 						</div>
 					</div>
 				</div>
-			</div><!-- end row -->
-		</div><!-- end container -->
+			</div>
+		</div>
 	</div>
 	<!-- end Services section -->
 
@@ -196,10 +564,11 @@
 				</div>
 				<div class="col-12 col-xl-9 col-xxl-10">
 					<h2 class="display-6 fw-medium mb-0">Suka ngulik Laravel Framework dan main-main sama server. Bikin
-						aplikasi web yang keren, cepet, dan gampang dikembangin kedepannya.</h2>
+						aplikasi web yang keren, cepet, dan gampang dikembangin
+						kedepannya.</h2>
 				</div>
-			</div><!-- end row -->
-		</div><!-- end container -->
+			</div>
+		</div>
 	</div>
 	<!-- end About section -->
 
@@ -500,9 +869,9 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-9">
-							<h4>Full Stack Developer <span
-									class="fst-italic fw-medium text-lighter-30">@DISKOMINFO</span></h4>
-							<p>Mengembangkan berbagai aplikasi web menggunakan Laravel Framework. Mengelola
+							<h4>Software Engineer <span class="fst-italic fw-medium text-lighter-30">@DISKOMINFO</span>
+							</h4>
+							<p>Mengembangkan berbagai aplikasi web dan mobile. Mengelola
 								infrastruktur server menggunakan Proxmox Virtualization untuk memastikan performa dan
 								keamanan yang optimal.</p>
 						</div>
@@ -515,9 +884,9 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg-9">
-							<h4>Full Stack Developer <span class="fst-italic fw-medium text-lighter-30">Freelance</span>
+							<h4>Software Engineer <span class="fst-italic fw-medium text-lighter-30">@Freelance</span>
 							</h4>
-							<p>Mengembangkan berbagai aplikasi web custom sesuai kebutuhan client.</p>
+							<p>Mengembangkan berbagai aplikasi web dan mobile custom sesuai kebutuhan client.</p>
 						</div>
 					</div>
 				</div>
@@ -525,11 +894,36 @@
 				<div class="col-12 col-xxl-4">
 					<div class="row g-4">
 						<div class="col-12 col-lg-6 col-xxl-12">
-							<div class="bg-theme-secondary border-radius box-shadow p-4 p-md-5 icon-3xl">
-								<i class="bi bi-mortarboard text-white-50"></i>
-								<div class="mt-3 mt-lg-4">
-									<h5 class="fw-medium mb-1">S1 Teknik Informatika</h5>
-									<span>Universitas Dinamika Bangsa Jambi</span>
+							<div
+								class="bg-theme-secondary border-radius box-shadow p-4 p-md-5 position-relative overflow-hidden">
+								<!-- Gradient Overlay -->
+								<div class="gradient-overlay"></div>
+
+								<!-- Education Icon -->
+								<div class="education-icon">
+									<i class="bi bi-mortarboard-fill text-gradient"></i>
+								</div>
+
+								<!-- Education Content -->
+								<div class="education-content position-relative">
+									<span class="badge bg-gradient mb-3">2017 - 2021</span>
+									<h5 class="fw-medium mb-2">Bachelor of Computer Science</h5>
+									<p class="mb-0 d-flex align-items-center">
+										<i class="bi bi-building me-2"></i>
+										Universitas Dinamika Bangsa Jambi
+									</p>
+
+									<!-- Additional Info -->
+									<div class="mt-3 pt-3 border-top border-light opacity-75">
+										<div class="d-flex align-items-center mb-2">
+											<i class="bi bi-trophy me-2"></i>
+											<span>GPA: 3.48/4.00</span>
+										</div>
+										<div class="d-flex align-items-center">
+											<i class="bi bi-code-square me-2"></i>
+											<span>Focus: Web Development & Cloud Computing</span>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -544,35 +938,25 @@
 	<div class="py-5">
 		<div class="swiper sliding-text">
 			<div class="swiper-wrapper">
-				<!-- Sliding Text Item 1 -->
 				<div class="swiper-slide">
 					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Code • Debug • Deploy 🚀</h2>
+						Code • Build • Deploy 🚀</h2>
 				</div>
-				<!-- Sliding Text Item 2 -->
 				<div class="swiper-slide">
 					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Laravel • MySQL • Vue.js ⚡</h2>
+						Laravel • MySQL • APIs 💻</h2>
 				</div>
-				<!-- Sliding Text Item 3 -->
 				<div class="swiper-slide">
 					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Design • Develop • Deliver 💫</h2>
+						Proxmox • Docker • Linux 🐧</h2>
 				</div>
-				<!-- Sliding Text Item 4 -->
 				<div class="swiper-slide">
 					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Linux • Proxmox • Docker 🔧</h2>
+						Server • Security • Scale ⚡</h2>
 				</div>
-				<!-- Sliding Text Item 5 -->
 				<div class="swiper-slide">
 					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Think • Create • Innovate ✨</h2>
-				</div>
-				<!-- Sliding Text Item 6 -->
-				<div class="swiper-slide">
-					<h2 class="display-2 font-family-tertiary fw-semi-bold stroke-text line-height-130 opacity-25 mb-0">
-						Build Something Amazing 🎯</h2>
+						Develop • Test • Optimize 🔄</h2>
 				</div>
 			</div>
 		</div>
