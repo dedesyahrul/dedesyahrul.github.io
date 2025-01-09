@@ -321,6 +321,44 @@
 				margin-bottom: 1rem;
 			}
 		}
+
+		.verified-badge-sm {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1rem;
+			color: #0095F6;
+			/* Instagram blue */
+			position: relative;
+		}
+
+		.verified-badge-sm i {
+			color: #0095F6 !important;
+			/* Instagram blue */
+			filter: drop-shadow(0 0 5px rgba(0, 149, 246, 0.3));
+		}
+
+		/* Hover effect */
+		.verified-badge-sm:hover::after {
+			content: 'Verified';
+			position: absolute;
+			bottom: -25px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: rgba(0, 0, 0, 0.8);
+			color: #fff;
+			padding: 4px 8px;
+			border-radius: 4px;
+			font-size: 0.75rem;
+			white-space: nowrap;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.verified-badge-sm {
+				font-size: 0.875rem;
+			}
+		}
 	</Style>
 </head>
 
@@ -372,10 +410,12 @@
 			</div>
 			<!-- Header Logo -->
 			<div class="header-logo">
-				<h3 class="fw-semi-bold uppercase">dedesyahh</h3>
-				<!--
-					<img src="assets/images/header-logo.png" alt="">
-					-->
+				<h3 class="fw-semi-bold uppercase d-flex align-items-center">
+					dedesyahh
+					<span class="verified-badge-sm ms-2">
+						<i class="bi bi-patch-check-fill" style="color: #0095F6 !important;"></i>
+					</span>
+				</h3>
 			</div>
 		</div>
 	</div>
@@ -521,7 +561,7 @@
 											<i class="bi bi-android2"></i>
 											Android
 										</div>
-										
+
 									</div>
 								</div>
 
