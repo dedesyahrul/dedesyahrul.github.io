@@ -11,6 +11,7 @@ services:
     volumes:
       - caddy_data:/data
       - caddy_config:/config
+      - ./ssl:/etc/caddy/ssl:ro
 
 volumes:
   caddy_data:

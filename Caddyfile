@@ -1,4 +1,5 @@
 dedesyahrul.dev, www.dedesyahrul.dev {
+	tls /etc/caddy/ssl/origin-cert.pem /etc/caddy/ssl/origin-key.pem
 	root * /srv
 	encode zstd gzip
 	file_server

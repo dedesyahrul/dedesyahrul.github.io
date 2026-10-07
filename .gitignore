@@ -155,3 +155,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .gitignore
+
+# Cloudflare Origin Certificate and private key
+/ssl/
