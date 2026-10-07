@@ -12,7 +12,14 @@ services:
       - caddy_data:/data
       - caddy_config:/config
       - ./ssl:/etc/caddy/ssl:ro
+    networks:
+      - proxy
 
 volumes:
   caddy_data:
   caddy_config:
+
+networks:
+  proxy:
+    external: true
+    name: proxy

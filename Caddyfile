@@ -1,12 +1,17 @@
 dedesyahrul.dev, www.dedesyahrul.dev {
-	tls /etc/caddy/ssl/origin-cert.pem /etc/caddy/ssl/origin-key.pem
-	root * /srv
-	encode zstd gzip
-	file_server
+    tls /etc/caddy/ssl/origin-cert.pem /etc/caddy/ssl/origin-key.pem
+    root * /srv
+    encode zstd gzip
+    file_server
 
-	header {
-		X-Content-Type-Options nosniff
-		X-Frame-Options SAMEORIGIN
-		Referrer-Policy strict-origin-when-cross-origin
-	}
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options SAMEORIGIN
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+}
+
+regist.dedesyahrul.dev {
+    tls /etc/caddy/ssl/origin-cert.pem /etc/caddy/ssl/origin-key.pem
+    reverse_proxy absen-qr-frontend:80
 }
